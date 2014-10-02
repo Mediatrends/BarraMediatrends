@@ -18,11 +18,11 @@
 <?php include 'svg_icons.php' ?>
 <main class="content">
 	
-	<aside class="content_aside">
+	<div class="content_aside">
 		
 		<div class="logo">
 			
-			<svg viewBox="0 0 607.298 564.523">
+			<svg id="svg_logo" viewBox="0 0 607.298 564.523">
 				<use xlink:href="#svg_logo"/>
 			</svg>
 
@@ -44,21 +44,47 @@
 		</div>
 		<div class="contacto"></div>
 
-	</aside>
+	</div>
+	
+	<div class="content_sites">
+		<div id="tab-1" class="tab-content current">
+
+			<h2>Categoria</h2>
+			<ul>
+				<li>sitio 01</li>
+				<li>sitio 02</li>
+				<li>sitio 03</li>
+				<li>sitio 04</li>
+				<li><a href="">link</a></li>
+			</ul>
+			
+		</div>
+
+		<div id="tab-2" class="tab-content">
+
+			<h2>share</h2>
+
+		</div>
+	</div>
 
 	<div id="btn_open-close">
 		
 		<div class="open">
 			
-			<svg viewBox="0 0 2353.461 468.875">
+			<svg id="svg_logo2" viewBox="0 0 2353.461 468.875">
 				<use xlink:href="#svg_logo2"/>
 			</svg>
 
 		</div>
+
 		<div class="close">
 			<p><span>X</span></p>
 		</div>
-
+		
+		<ul class="tabs">
+			<li id="sitios_tab" class="tab-link current" data-tab="tab-1">SITIOS</li>
+			<li id="share_tab" class="tab-link" data-tab="tab-2">SHARE</li>
+		</ul>
 	</div>
 
 </main>
