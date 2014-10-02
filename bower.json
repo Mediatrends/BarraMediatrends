@@ -1,0 +1,23 @@
+{
+  "name": "barra",
+  "version": "0.0.1",
+  "authors": [
+    "mauro@mediatrends.cl"
+  ],
+  "description": "barra",
+  "keywords": [
+    "theme"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}

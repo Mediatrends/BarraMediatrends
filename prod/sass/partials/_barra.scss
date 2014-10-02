@@ -1,0 +1,92 @@
+.content{
+	width:100%;
+	height: 27px;
+	background:{color:#000;}
+	position: fixed;
+	bottom: 0;
+	overflow:hidden;
+	aside{
+		background: {color:#fff;}
+		float:left;
+		.logo{
+			width:74px;
+			margin:30px auto;
+			@extend .hide;
+			svg{
+				@extend .adjust;
+			}
+		}
+		.redes{
+			@extend .hide;
+			ul{
+				list-style:none;
+				margin: 0;
+				padding: 0;
+				@extend .text-center;
+				li{
+					width:37px;
+					height: 37px;
+					padding: 0;
+					margin: 0 10px;
+					font:{size:20px;}
+					background: {color:#000;}
+					@include border-top-radius(50%);
+					@include border-bottom-radius(50%);
+					@include border-left-radius(50%);
+					@include border-right-radius(50%);
+					display: inline-block;
+					a{
+						display: table;
+						width:100%;
+						height:100%;
+						color:#fff;
+						text:{decoration:none;}
+						i{
+							display: table-cell;
+							vertical-align: middle;
+						}	
+					}
+					
+				}
+			}
+		}
+	}
+	#btn_open-close{
+		.open{
+			background: {color:#fff;}
+			max-width:132px;
+			height:27px;
+			padding:3px 0 0 15px;
+			cursor: pointer;
+			svg{
+				@extend .adjust;
+				max-width:99px;
+				max-height:20px;
+			}
+		}
+		.close{
+			position:absolute;
+			cursor: pointer;
+			top:0;
+			right:0;
+			background: {color:#fff;}
+			font:{family:$font_roboto;}
+			color:#000;
+			@extend .hide;
+			width:27px;
+			height:27px;
+			@extend .text-center;
+			p{
+				display: table;
+				margin: 0;
+				padding: 0;
+				width:100%;
+				height: 100%;
+				span{
+					display: table-cell;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}

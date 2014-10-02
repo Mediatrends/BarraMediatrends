@@ -1,0 +1,64 @@
+//open animate
+@include keyframes(open) {
+  0% {
+    height:27px;
+  }
+  100% {
+    height:250px;
+  }
+}
+@include keyframes(close) {
+  0% {
+    height:250px;
+  }
+  100% {
+    height:27px;
+  }
+}
+.animate_open{
+	@include animation(open 1s ease-in-out forwards);
+}
+.animate_close{
+	@include animation(close .3s alternate forwards);
+}
+
+//asside open
+
+@include keyframes(view){
+  from{
+    width:0px;
+  }
+  to{
+    width:283px;
+  }
+}
+@include keyframes(hide){
+  from{
+    width:283px;
+  }
+  to{
+    width:0px;
+  }
+}
+@include keyframes(logo_entrance){
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity:.5;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.animate_aside-view{
+  @include animation-delay(1.3s);
+  @include animation(view 1s ease-in-out forwards);
+}
+.animate_aside-hide{
+  @include animation(hide .1s alternate forwards);
+}
+.animate_logo{
+  @include animation-delay(2.3s);
+  @include animation(logo_entrance .4 forwards)
+}
