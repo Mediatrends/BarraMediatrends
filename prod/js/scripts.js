@@ -3,6 +3,10 @@ $(document).ready(function(){
 	$('.open, #sitios_tab, #share_tab').click(function(){
 		$('.content').addClass('animate_open').removeClass('animate_close');
 
+		$('.tabs').animate({
+			left:283
+		},500);
+
 		$('.content_aside').delay(1000).animate({
 			left:0
 		},800,function(){
@@ -39,6 +43,10 @@ $(document).ready(function(){
 			},800,function(){
 				
 				$('.content').removeClass('animate_open').addClass('animate_close');
+				$('.tabs').animate({
+					left:148
+				},500);
+
 			});
 		});
 
