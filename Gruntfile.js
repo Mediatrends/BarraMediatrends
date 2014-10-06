@@ -52,6 +52,14 @@ module.exports = function(grunt) {
 					'app/<%= globalConfig.path_cssout %>': 'prod/<%= globalConfig.path_scss %>'
 				},
 			},
+			prod:{
+				options:{
+					style: 'compressed'
+				},
+				files:{
+					'app/<%= globalConfig.path_cssout %>': 'prod/<%= globalConfig.path_scss %>'
+				}
+			}
 		},
 
 		jshint:{
@@ -76,5 +84,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	grunt.registerTask('dev', ['watch']);
-	grunt.registerTask('default', ['wiredep','sass','uglify']);
+	grunt.registerTask('default', ['wiredep','sass:prod','uglify']);
 };

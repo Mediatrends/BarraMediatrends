@@ -16,8 +16,14 @@
   }
 }
 .animate_open{
-	@include animation(open 1s ease-in-out forwards);
+  @include animation-name(open);
+  @include animation-duration(1s);
+  @include animation-timing-function(ease-in-out);
+  @include animation-fill-mode(forwards);
 }
 .animate_close{
-	@include animation(close 1s alternate forwards);
+	@include animation-name(close);
+  @include animation-duration(1s);
+  @include animation-timing-function(ease);
+  @include animation-fill-mode(forwards);
 }
