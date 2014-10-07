@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 		watch:{
 			configFiles:{
 				files:['app/index.php'],
-				tasks:['wiredep'],
+				//tasks:['wiredep'],
 				options:{
 					livereload: true,
 				},
@@ -35,13 +35,13 @@ module.exports = function(grunt) {
 				},
 			},
 		},
-		wiredep:{
+		/*wiredep:{
 			target:{
 				src:[
 					'app/<%= globalConfig.wiredep_file %>'
 				],
 			}
-		},
+		},*/
 
 		sass: {
 			dist: {
@@ -78,11 +78,11 @@ module.exports = function(grunt) {
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-wiredep');
+	//grunt.loadNpmTasks('grunt-wiredep');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	grunt.registerTask('dev', ['watch']);
-	grunt.registerTask('default', ['wiredep','sass:prod','uglify']);
+	grunt.registerTask('default', ['sass:prod','uglify']);
 };

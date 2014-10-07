@@ -15,6 +15,28 @@
     height:27px;
   }
 }
+@include keyframes(slider){
+  0%{
+    width:100%;
+    right:0;
+  }
+  100%{
+    width:175px;
+    right:0;
+  }
+}
+@include keyframes(slidel){
+  0%{
+    width:175px;
+    height: 27px;
+    right:0;
+  }
+  100%{
+    width:100%;
+    height: 27px;
+    right:0;
+  }
+}
 .animate_open{
   @include animation-name(open);
   @include animation-duration(1s);
@@ -26,4 +48,17 @@
   @include animation-duration(1s);
   @include animation-timing-function(ease);
   @include animation-fill-mode(forwards);
+}
+
+.animate_slider{
+  @include animation-name(slider);
+  @include animation-duration(1s);
+  @include animation-timing-function(ease);
+  @include animation-fill-mode(forwards);
+}
+.animate_slidel{
+  @include animation-name(slidel);
+  @include animation-duration(1s);
+  @include animation-timing-function(ease);
+  @include animation-fill-mode(backwards);
 }

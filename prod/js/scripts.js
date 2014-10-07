@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	$('.open, #sitios_tab, #share_tab').click(function(){
+	$('.open_sli, #sitios_tab, #share_tab').on('click',function(){
 
 		$('.content').addClass('animate_open').removeClass('animate_close'); 	//add anima open barra
 
@@ -25,12 +25,12 @@ $(document).ready(function(){
 			$('.content_sites').delay(1600).fadeIn();							//anima sites intro
 		});
 
-		$('.open').fadeOut();														//hide open button
+		$('.open, .close_slide').fadeOut();														//hide open button
 		$('.close_main').fadeIn();														//show close intro
 
 	});
 
-	$('.close_main').click(function(){		
+	$('.close_main').on('click',function(){		
 
 		$('.logo').animate({
 			opacity:0,
@@ -55,25 +55,43 @@ $(document).ready(function(){
 
 		$('.content_sites').delay(1600).fadeOut();
 
-		$('.open').delay(1500).fadeIn();
+		$('.open, .close_slide').delay(1500).fadeIn();
 		$('.close_main').fadeOut();
 
 	});
 
+	$('.close_slide p.slider').on('click', function(){
+
+		$('.open_sli').fadeOut();
+		$('.open_sli2').fadeIn();
+
+		$('.content').addClass('animate_slider').removeClass('animate_slidel');
+
+		$('.close_slide p.slider').delay(1000).fadeOut();
+		$('.close_slide p.slidel').delay(1000).fadeIn();
+	});
+
+	$('.close_slide p.slidel, .open_sli2').on('click', function(){
+
+		$('.content').addClass('animate_slidel').removeClass('animate_slider');
+
+		$('.close_slide p.slider').delay(1000).fadeIn();
+		$('.close_slide p.slidel').delay(1000).fadeOut(function(){
+			$('.content').removeClass('animate_slidel animate_close');
+			$('.open_sli2').hide();
+			$('.open_sli').show();
+		});
+	});
+
 	//tabs
-	$('ul.tabs li').click(function(){
+	$('ul.pestanas li').on('click',function(){
 		var tab_id = $(this).attr('data-tab');
 
-		$('ul.tabs li').removeClass('current');
+		$('ul.pestanas li').removeClass('current');
 		$('.tab-content').removeClass('current');
 
 		$(this).addClass('current');
 		$("#"+tab_id).addClass('current');
 	});
 
-	var vhref = $(location).attr('href');
-	var vTitle = $(this).attr('title');
-
-	//$('#spnTitle').text('<b>' + vTitle + '</b>');
-	//$('#spnURL').text('<b>' + vhref + '</b>');
 });
