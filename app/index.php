@@ -15,7 +15,7 @@
 	
 	<script>
 		var vhref = $(location).attr('href');
-		var vTitle = $(this).attr('title');
+		var vTitle = document.title;
 
 		var fblink = "http://www.facebook.com/sharer/sharer.php?s=100&p[url]=" + vhref;
 		var twlink = "http://twitter.com/intent/tweet?text="+ vTitle +"%20"+ vhref +"%20via%20@mediatrendscl%0A%0A";

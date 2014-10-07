@@ -230,7 +230,7 @@
 				background: none;
 				color: #fff;
 				display: inline-block;
-				padding: 8px 15px;
+				padding: 1px 15px;
 				cursor: pointer;
 				&.current{
 					background: #fff;
@@ -248,7 +248,7 @@
 		.feeds{
 			float: left;
 			font:{size:10px;family:$font_roboto;}
-			max-width:500px;
+			max-width:600px;
 			overflow: hidden;
 			.rssBody{
 				ul{
@@ -259,19 +259,21 @@
 						float:left;
 						margin: 0 20px;
 						padding: 2px 0 0;
-						min-width: 500px;
+						max-width: 500px;
 						h3{
-							margin: 0;
-							padding: 0;
-							font:{size:11px;}
-							line:{height:12px;}
+							margin: 0 !important;
+							padding: 0 !important;
+							font:{size:11px !important;}
+							line:{height:12px !important;}
 						}
 						p{
-							font: {size:10px;}
-							margin: 0;
-							padding:0;
-							width:200px;
+							font: {size:10px !important;}
+							margin: 0 !important;
+							padding:0 !important;
+							width:100% !important;
+							height: 11px;
 							overflow: hidden;
+							line:{height: 10px;}
 						}
 					}
 				}
