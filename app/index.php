@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Barra</title>
+	<title>Barra & fidelizadora</title>
 	
 	<link rel="stylesheet" href="css/main.css">
 
@@ -14,11 +14,13 @@
 	<script src='js/jquery.marquee.min.js'></script>
 	
 	<script>
+
 		var vhref = $(location).attr('href');
 		var vTitle = document.title;
+		var encodedUrl = encodeURIComponent(vTitle);
 
 		var fblink = "http://www.facebook.com/sharer/sharer.php?s=100&p[url]=" + vhref;
-		var twlink = "http://twitter.com/intent/tweet?text="+ vTitle +"%20"+ vhref +"%20via%20@mediatrendscl%0A%0A";
+		var twlink = "https://twitter.com/share?url="+vhref+"&text="+encodedUrl+" vía:@mediatrendscl&hashtags=mediatrends,scl";
 		
 		$(document).ready(function(){
 			$('.feeds').rssfeed(vhref +'/feed',{
@@ -37,8 +39,9 @@
 	</script>
 </head>
 <body>
+
 <svg viewBox="0 0 607.298 564.523" class="hide">
-	<g id="svg_logo">
+	<g id="svg_logobarra">
 		<g>
 			<path d="M39.949,555.646c0,1.953-1.128,2.93-3.383,2.93c-1.099,0-1.883-0.137-2.354-0.41
 				c-0.961-0.566-1.441-1.406-1.441-2.52c0-0.938,0.42-1.699,1.26-2.285c0.391-0.273,0.586-0.449,0.586-0.527
@@ -534,7 +537,7 @@
 	</g>
 </svg>
 <svg viewBox="0 0 2353.461 468.875" class="hide">
-	<g id="svg_logo2">
+	<g id="svg_logobarra2">
 		<g>
 			<path fill="#231F20" d="M652.782,270.345c0,6.186-3.572,9.279-10.714,9.279c-3.479,0-5.963-0.434-7.453-1.299
 				c-3.044-1.795-4.565-4.455-4.565-7.98c0-2.969,1.33-5.381,3.99-7.237c1.236-0.866,1.855-1.423,1.855-1.67
@@ -1040,47 +1043,47 @@
 	</g>
 </svg>
 
-<main class="content">
+<main class="contentbarra">
 	
-	<div class="content_aside">
+	<div class="content_asidebarra">
 		
-		<div class="logo">
+		<div class="logobarra">
 			
-			<svg id="svg_logo" viewBox="0 0 607.298 564.523">
-				<use xlink:href="#svg_logo"/>
+			<svg id="svg_logobarra" viewBox="0 0 607.298 564.523">
+				<use xlink:href="#svg_logobarra"/>
 			</svg>
 
 		</div>
-		<div class="redes">
+		<div class="redesbarra">
 			
 			<ul>
-				<li class="social_fb">
+				<li class="social_fbbarra">
 					<a href="https://www.facebook.com/mediatrendscl" target="_blank"><i class="fa fa-facebook"></i></a>
 				</li>
-				<li class="social_tw">
+				<li class="social_twbarra">
 					<a href="https://twitter.com/mediatrendscl" target="_blank"><i class="fa fa-twitter"></i></a>
 				</li>
-				<li class="social_ig">
+				<li class="social_igbarra">
 					<a href="http://instagram.com/mediatrendscl" target="_blank"><i class="fa fa-instagram"></i></a>
 				</li>
 			</ul>
 
 		</div>
-		<div class="contacto"></div>
+		<div class="contactobarra"></div>
 
 	</div>
 	
-	<div class="content_sites">
+	<div class="content_sitesbarra">
 		<div id="tab-1" class="tab-content current">
 
 			<h2>Life Style</h2>
-			<ul id="sites">
+			<ul id="sitesbarra">
 				<li><a href="http://elsafari.cl" target="_blank">El Safari</a></li>
 				<li><a href="http://totalstreet.cl" target="_blank">Total Street</a></li>
 			</ul>
 
 			<h2>Sport</h2>
-			<ul id="sites">
+			<ul id="sitesbarra">
 				<li><a href="http://chilerunning.com" target="_blank">Chile Runnin</a></li>
 				<li><a href="http://chicfit.cl" target="_blank">Chic Fit</a></li>
 			</ul>
@@ -1091,13 +1094,13 @@
 
 			<h2>share</h2>
 
-			<ul id="share">
-				<li class="social_fb">
+			<ul id="sharebarra">
+				<li class="social_fbbarra">
 					<script>
 						document.writeln('<a href="'+fblink+'" target="_blank"><i class="fa fa-facebook"></i></a>');
 					</script>
 				</li>
-				<li class="social_tw">
+				<li class="social_twbarra">
 					<script>
 						document.writeln('<a href="'+twlink+'" target="_blank"><i class="fa fa-twitter"></i></a>');
 					</script>
@@ -1109,14 +1112,14 @@
 
 	<div id="btn_open-close">
 		
-		<div class="open">
+		<div class="openbarra">
 			
-			<svg id="svg_logo2" class="open_sli" viewBox="0 0 2353.461 468.875">
-				<use xlink:href="#svg_logo2"/>
+			<svg id="svg_logobarra2" class="open_sli" viewBox="0 0 2353.461 468.875">
+				<use xlink:href="#svg_logobarra2"/>
 			</svg>
 
-			<svg id="svg_logo2" class="hide open_sli2" viewBox="0 0 2353.461 468.875">
-				<use xlink:href="#svg_logo2"/>
+			<svg id="svg_logobarra2" class="hide open_sli2" viewBox="0 0 2353.461 468.875">
+				<use xlink:href="#svg_logobarra2"/>
 			</svg>
 
 		</div>
